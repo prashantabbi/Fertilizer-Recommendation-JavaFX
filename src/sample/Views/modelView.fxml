@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="706.0" style="-fx-background-color: #030d3b;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.modelViewController">
+   <children>
+      <MenuBar layoutY="-3.0" prefHeight="30.0" prefWidth="706.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Visualisations">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#showHist" text="NPK Histogram" />
+                  <MenuItem mnemonicParsing="false" onAction="#showCorr" text="Pearson's Coefficients" />
+                  <MenuItem mnemonicParsing="false" onAction="#showRel" text="Nitrogen-Lint Relation" />
+                  <MenuItem mnemonicParsing="false" onAction="#showOutp" text="Predicted Output Graph" />
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fx:id="graphView" fitHeight="467.0" fitWidth="628.0" layoutX="39.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/filler1.jpg" />
+         </image></ImageView>
+      <Label fx:id="graphTitle" alignment="CENTER" layoutY="39.0" prefHeight="45.0" prefWidth="706.0" text="Click on 'Visualisations' to see Modelled Graphs" textFill="WHITE">
+         <font>
+            <Font name="Microsoft Himalaya" size="34.0" />
+         </font></Label>
+      <Button layoutX="271.0" layoutY="594.0" mnemonicParsing="false" onAction="#goToIndexfromModel" prefHeight="37.0" prefWidth="196.0" style="-fx-background-color: #b1bdf2;" text="Exit Visualisation tool">
+         <font>
+            <Font name="Microsoft Himalaya" size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
